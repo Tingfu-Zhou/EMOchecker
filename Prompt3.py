@@ -7,3 +7,11 @@ assistant = client.beta.assistants.create(
   tools=[{"type": "code_interpreter"}],
   model="gpt-4o",
 )
+
+thread = client.beta.threads.create()
+message1 = client.beta.threads.messages.create(
+  thread_id=thread.id,
+  role="user",
+  content="I really want to watch it again. What do you think of this movie?"
+)
+

@@ -15,13 +15,15 @@ response = client.chat.completions.create(
           Category 3: Decomposition Reframing: The text decomposes a major task (redesigning the interface) into several subtasks that can be completed either sequentially or simultaneously, fitting this category.\
             Category 4: Restraining Reframing: There are no additional statements expressing constraints about the output generation.\
                 Category 5: Specialization Reframing: It does not specifically describe low-level tasks or omit any repeated or generic statements."
-    }
+    },
     {
       "role": "user",
-      "content": "Artificial intelligence is a technology with great promise."
+      "content": "I really want to watch it again. What do you think of this movie?"
     }
   ],
   temperature=0.8,
   max_tokens=64,
   top_p=1
 )
+
+print(response.choices[0].message.content)
